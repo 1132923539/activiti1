@@ -1,0 +1,25 @@
+server:
+  port: 666
+## 数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boot2?createDatabaseIfNotExist=true&useSSL=false&autoReconnect=true&timezone=+800&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    username: root
+    password: 123
+
+
+#配置主机设置
+  application:
+    name: Activiti
+
+  activiti:
+    check-process-definitions: false
+
+#配置健康检查信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
